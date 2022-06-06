@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<header class="nav-bar-sty">
+        <div class="z-50 w-full bg-color-header fixed">
+            <div class="scroll-bar grid grid-cols-8 self-center">
+                <div class="col-span-2 pl-6 self-center">
+                    <a href="#">
+                        <h2 class="lg:text-xl font-bold txt-color">Subcribe</h2>
+                    </a>
+                </div>
+    
+                <div class="col-span-4 self-center">
+                    <div class="logo mx-auto w-40">
+                        <img src="http://localhost/nitharsanam/wp-content/uploads/Ref_1_Canada_Nitharsanam_in_English_in_logo-removebg-preview-2-2.png" >
+                    </div>
+                </div>
+                <div class="col-span-2 ">
+                    <div class="imgc w-auto lg:w-40">
+                        <img src="http://localhost/nitharsanam/wp-content/uploads/Ref-image-2.png" >
+                    </div>
+                </div>
+            </div>
+            <div class="xs-menu-cont">
+                <a id="menutoggle"><i class="fa fa-align-justify"></i> </a>
+                <nav class="xs-menu displaynone">
+                    <ul>
+                        <li class="active">
+                            <a href="#">முகப்பு</a>
+                        </li>
+                        <li>
+                            <a href="#">செய்திகள்</a>
+                        </li>
+                        <li>
+                            <a href="#">விளையாட்டு</a>
+                        </li>
+                        <li>
+                            <a href="#">வர்த்தகம்</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#">கல்வி</a>
+                        </li>
+                      
+                        <li>
+                            <a href="#">அரசியல்</a>
+                        </li>
+    
+                    </ul>
+                </nav>
+            </div>
+            <nav class="menu bg-red-700 text-center">
+                <ul>
+                    <li class="active">
+                        <a href="#">முகப்பு</a>
+                    </li>
+                    <li class="drop-down">
+                        <a href="#">செய்திகள்</a>
+    
+                        <div class="mega-menu fadeIn animated">
+                            <div class="mm-6column">
+                                <span class="left-images">
+                                    <img
+                                        src="https://4.bp.blogspot.com/-faF-AemPFUM/U4ryP7pQRsI/AAAAAAAAEvA/fZ-hskCSln4/s1600/Magento%2Bthemes.jpg">
+                                    <p>Most Popular Styles </p>
+                                </span>
+                                 <span class="categories-list">
+                                    <ul>
+                                        <span>Big Stories</span>
+                                        <li>விளையாட்டு</li>
+                                        <li>ஆன்மீகம்</li>
+                                        <li>சுற்றுச்சூழல்</li>
+                                        <li>இந்தியா</li>
+                                        <li>தமிழ்நாடு</li>
+                                        <li>Scanners</li>
+                                        <li>Jumpers & Cardigans</li>
+                                        <li><a class="mm-view-more" href="#">View more →</a></li>
+                                    </ul>
+                                </span> 
+    
+                            </div>
+                             <div class="mm-3column">
+                                <span class="categories-list">
+                                    <ul>
+                                        <span>TV & Video</span>
+                                        <li>LED TVs
+                                        <li>Plasma TVs
+                                        <li>3D TVs
+                                        <li>DVD & Blu-ray Players
+                                        <li>Home Theater Systems
+                                        <li>Cell Phones
+                                        <li>Apple iPhone
+                                        <li><a class="mm-view-more" href="#">View more →</a></li>
+                                    </ul>
+                                </span> 
+                            </div>
+                            
+                        </div>
+    
+                    </li>
+                  
+                    
+                    <li>
+                        <a href="#">சினிமா</a>
+    
+                    </li>
+                    <li>
+                        <a href="#">கல்வி</a>
+                    </li>
+                    <li>
+                        <a href="#">அரசியல்</a>
+                    </li>
+                    <li>
+                        <a href="#">வீடியோ</a>
+                    </li>
+
+                </ul>
+            </nav> 
+            <marquee class="txt-color bg-white border-b-2 border-black p-2 font-bold text-xl" width="100%" direction="left"
+                height="30%">
+                ரூ.1 லட்சம் முதலீடு செய்தால் மாதம் ரூ.30 ஆயிரம் வட்டி என விளம்பரம்..
+                                            ஆருத்ரா
+                                            நிறுவனம் தொடர்புடைய 4 இடங்களில் சோதனை..!
+            </marquee>
+        </div>
+    </header>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+    
+        $(document).ready(function () {
+            //responsive menu toggle
+            $("#menutoggle").click(function () {
+                $('.xs-menu').toggleClass('displaynone');
+    
+            });
+            //add active class on menu
+            $('ul li').click(function (e) {
+                e.preventDefault();
+                $('li').removeClass('active');
+                $(this).addClass('active');
+            });
+            //drop down menu	
+            $(".drop-down").hover(function () {
+                $('.mega-menu').addClass('display-on');
+            });
+            $(".drop-down").mouseleave(function () {
+                $('.mega-menu').removeClass('display-on');
+            });
+    
+        });
+    
+        const header = document.querySelector('header');
+        let prevScrollpos = window.pageYOffset;
+        window.addEventListener('scroll', () => {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos < currentScrollPos) {
+                header.classList.add('hide');
+            } else {
+                header.classList.remove('hide');
+            }
+            prevScrollpos = currentScrollPos;
+        })
+    </script>
+    
+    <div class="pt-32 lg:pt-52">
+        <div class="grid grid-cols-1 lg:grid-cols-4 mb-10 div-reverse">
+            <div class="col-span-1 p-6">
+                <!-- <h1 class="text-2xl font-bold">Improtant news</h1> -->
+                <div class="bg-white lg:hidden pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும்
+                                        வலுப்படுத்த
+                                        நடவடிக்கை - பிரதமர் மோடி</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர்
+                                        குடும்பங்களுக்கு தலா 3 லட்ச ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                <div class="my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>
+                <div class="bg-white lg:hidden pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும்
+                                        வலுப்படுத்த
+                                        நடவடிக்கை - பிரதமர் மோடி</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர்
+                                        குடும்பங்களுக்கு தலா 3 லட்ச ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                <div class="my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>
+                <div class="bg-white lg:hidden pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும்
+                                        வலுப்படுத்த
+                                        நடவடிக்கை - பிரதமர் மோடி</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர்
+                                        குடும்பங்களுக்கு தலா 3 லட்ச ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                <div class="my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>       
+                <div class="hidden lg:block my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>
+                <div class="hidden lg:block my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>
+                <div class="hidden lg:block my-8">
+                    <img
+                        src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                </div>
+            </div>
+            <div class="col-span-3">
+                <div class="grid grid-cols-1 lg:grid-cols-3">
+                    <div class="col-span-2">
+                        <div class="p-4">
+                            <div class="bg-white">
+                                <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                <h1 class="text-2xl my-8 font-bold">எலக்ட்ரிக்-பேருந்துகளை துவக்கி-வைத்தார்-முதல்வர்
+                                    கெஜ்ரிவால்..-மே-26-வரை,-இலவச பயணம்-மேற்கொள்ளலாம்-என அறிவிப்பு..!</h1>
+                                <p class="border-b-2 border-gray-400 w-6"></p>
+                                <p class="text-sm my-8 text-gray-400">மருத்துவ மாணவி விஸ்மயா தற்கொலை வழக்கில் கணவர் கிரண்
+                                    குமாருக்கு
+                                    10 ஆண்டு சிறை..! </p>
+                                <img
+                                    src="https://d3dqrx874ys9wo.cloudfront.net/uploads/web/images/750x430/1653324272177666.jpg">
+    
+                                <div class="grid grid-cols-1 lg:grid-cols-2">
+                                    <div class="col-span-1 pr-6 pt-12">
+                                        <p class="mb-4">காவிரி டெல்டாவை பாதுகாக்கப்பட்ட வேளாண் மண்டலம் தொடர்பாக, மத்திய அரசு
+                                            இன்னும்
+                                            இரண்டு மூன்று நாளில் முடிவு எடுத்து அறிவிக்க உள்ளதாக அமைச்சர் ஜெயக்குமார்
+                                            தெரிவித்தார்.
+                                        </p>
+                                        <p class="mb-4">டோக்கியோவில் துவங்கிய குவாட் மாநாடு... இந்தியா - அமெரிக்கா இருதரப்பு
+                                            பேச்சுவார்த்தை..!</p>
+                                        <p class="mb-4">டோக்கியோவில் துவங்கிய குவாட் மாநாடு... இந்தியா - அமெரிக்கா இருதரப்பு
+                                            பேச்சுவார்த்தை..!</p>
+                                    </div>
+                                    <div class="col-span-1 lg:pl-6 pt-12">
+                                        <p class="mb-4">ரூ.1 லட்சம் முதலீடு செய்தால் மாதம் ரூ.30 ஆயிரம் வட்டி என விளம்பரம்..
+                                            ஆருத்ரா
+                                            நிறுவனம் தொடர்புடைய 4 இடங்களில் சோதனை..!</p>
+                                        <p class="mb-4">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும் வலுப்படுத்த
+                                            நடவடிக்கை -
+                                            பிரதமர் மோடி சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர் குடும்பங்களுக்கு தலா 3
+                                            லட்ச
+                                            ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+    
+                                        <p class="mb-4">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும் வலுப்படுத்த
+                                            நடவடிக்கை -
+                                            பிரதமர் மோடி சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர் குடும்பங்களுக்கு தலா 3
+                                            லட்ச
+                                            ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+                                    </div>
+                                </div>
+    
+                                <img class="mt-12"
+                                    src="https://d3dqrx874ys9wo.cloudfront.net/uploads/web/images/750x430/158132174599920.jpg">
+                                <div class="grid grid-cols-1 lg:grid-cols-2">
+                                    <div class="col-span-1 pr-6 pt-12">
+                                        <p class="mb-4">காவிரி டெல்டாவை பாதுகாக்கப்பட்ட வேளாண் மண்டலம் தொடர்பாக, மத்திய அரசு
+                                            இன்னும்
+                                            இரண்டு மூன்று நாளில் முடிவு எடுத்து அறிவிக்க உள்ளதாக அமைச்சர் ஜெயக்குமார்
+                                            தெரிவித்தார்.
+                                        <p>டோக்கியோவில் துவங்கிய குவாட் மாநாடு... இந்தியா - அமெரிக்கா இருதரப்பு
+                                            பேச்சுவார்த்தை..!
+                                        </p>
+                                    </div>
+                                    <div class="col-span-1 lg:pl-6 pt-12">
+                                        <p class="mb-4">ரூ.1 லட்சம் முதலீடு செய்தால் மாதம் ரூ.30 ஆயிரம் வட்டி என விளம்பரம்..
+                                            ஆருத்ரா
+                                            நிறுவனம் தொடர்புடைய 4 இடங்களில் சோதனை..!</p>
+                                        <p>இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும் வலுப்படுத்த நடவடிக்கை - பிரதமர்
+                                            மோடி
+                                            சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர் குடும்பங்களுக்கு தலா 3 லட்ச ரூபாய்
+                                            நிவாரணம்
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-1">
+                        <div class="p-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-2">
+                                <div class="bg-white pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">இந்தியா - ஜப்பான் இடையிலான கலாச்சார உறவை மேலும்
+                                        வலுப்படுத்த
+                                        நடவடிக்கை - பிரதமர் மோடி</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">சாத்தூர் பட்டாசு ஆலை விபத்தில் உயிரிழந்தோர்
+                                        குடும்பங்களுக்கு தலா 3 லட்ச ரூபாய் நிவாரணம் - முதலமைச்சர் அறிவிப்பு</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-2">
+                                <div class="bg-white pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">எலக்ட்ரிக்-பேருந்துகளை துவக்கி-வைத்தார்-முதல்வர்
+                                        கெஜ்ரிவால்..-மே-26-வரை,-இலவச பயணம்-மேற்கொள்ளலாம்-என அறிவிப்பு..!</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">காவிரி டெல்டாவை பாதுகாக்கப்பட்ட வேளாண் மண்டலம்
+                                        தொடர்பாக, மத்திய அரசு இன்னும் இரண்டு மூன்று நாளில் முடிவு எடுத்து அறிவிக்க உள்ளதாக
+                                        அமைச்சர் ஜெயக்குமார் தெரிவித்தார்.</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4">
+                            <div class="grid grid-cols-1 lg:grid-cols-2">
+                                <div class="bg-white pb-2.5 col-span-2 border-b-2 border-gray-200">
+                                    <h6 class="text-xl font-bold text-gray-400">Today News</h6>
+                                    <h1 class="text-2xl my-8 font-bold">காவிரி டெல்டாவை பாதுகாக்கப்பட்ட வேளாண் மண்டலம்
+                                        தொடர்பாக, மத்திய அரசு இன்னும் இரண்டு மூன்று நாளில் முடிவு எடுத்து அறிவிக்க உள்ளதாக
+                                        அமைச்சர் ஜெயக்குமார் தெரிவித்தார்.</h1>
+                                    <p class="border-b-2 border-gray-400 w-6"></p>
+                                    <p class="text-sm my-8 text-gray-400">எலக்ட்ரிக்-பேருந்துகளை துவக்கி-வைத்தார்-முதல்வர்
+                                        கெஜ்ரிவால்..-மே-26-வரை,-இலவச பயணம்-மேற்கொள்ளலாம்-என அறிவிப்பு..!</p>
+                                    <a class="text-gray-400" href="http://localhost/nitharsanam/index.php/">containing
+                                        information
+                                        --></a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <img class="mt-8 p-4 mx-auto"
+                                src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="grid grid-cols-1 lg:grid-cols-4 mb-10">
+            <div class="col-span-1">
+                <a href="http://localhost/nitharsanam/index.php/">
+                    <div class="p-4">
+                        <img class="img-size"
+                            src="https://d3dqrx874ys9wo.cloudfront.net/uploads/web/images/750x430/158134248399978.jpg">
+                        <div class="bg-white pt-10">
+                            <h6 class="text-xl text-gray-400 font-bold">12 November,2020</h6>
+                            <h1 class="text-2xl my-6 font-bold"> கடந்த ஆண்டில் இயல்பை விட கூடுதலாக மழைப்பொழிவு..!
+                            </h1>
+                            <p class="text-sm mt-6">தமிழகத்தில் கடந்த ஆண்டில் இயல்பை விட 2 சதவீதம் கூடுதலாக 45 சென்டி
+                                மீட்டர் மழை பெய்துள்ளதாக தென் மண்டல வானிலை ஆய்வு மைய தலைவர் பாலச்சந்திரன் தெரிவித்துள்ளார்.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-1">
+                <a href="http://localhost/nitharsanam/index.php/">
+                    <div class="p-4">
+                        <img class="img-size"
+                            src="https://d3dqrx874ys9wo.cloudfront.net/uploads/web/images/750x430/158132174599920.jpg">
+                        <div class="bg-white pt-10">
+                            <h6 class="text-xl text-gray-400 font-bold">12 November,2020</h6>
+                            <h1 class="text-2xl my-6 font-bold">காதலிக்க மறுத்ததால் தீக்குளித்து தற்கொலைக்கு முயன்ற இளைஞர்
+                            </h1>
+                            <p class="text-sm mt-6">விருதுநகர் மாவட்டம் ராஜபாளையம் அருகே கல்லூரி மாணவி காதலிக்க மறுத்ததால்
+                                தீக்குளித்து தற்கொலைக்கு முயன்ற இளைஞருக்கு தீவிர சிகிச்சை அளிக்கப்பட்டு வருகிறது.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-1">
+                <a href="http://localhost/nitharsanam/index.php/">
+                    <div class="p-4">
+                        <img class="img-size"
+                            src="https://d3dqrx874ys9wo.cloudfront.net/uploads/web/images/750x430/1653387753177758.jpg">
+                        <div class="bg-white pt-10">
+                            <h6 class="text-xl text-gray-400 font-bold">12 November,2020</h6>
+                            <h1 class="text-2xl my-6 font-bold">கஞ்சா தடுப்பு வேட்டையில் இதுவரை 20000 பேர் கைது.</h1>
+                            <p class="text-sm mt-6">தமிழகத்தில் கஞ்சா தடுப்பு வேட்டையில், இதுவரை 20 ஆயிரம் பேர் கைது
+                                செய்யப்பட்டுள்ளதாக தெரிவித்த டிஜிபி சைலேந்திரபாபு, மீண்டும் கஞ்சா விற்பனையில் ஈடுபடுவோர்
+                                மீது கடும் நடவடிக்கை எடுக்கப்படும் என எச்சரிக்கை விடுத்தார்.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-span-1">
+                <img src="http://localhost/nitharsanam/wp-content/uploads/Ad-Refer-for-header-Similar-to-Ref-image-2.png">
+            </div>
+        </div>
+    
+    </div>
+    
+    <div class="bg-red-700 p-8 mt-12 lg:px-10">
+        <h1 class="inline-block font-bold text-white pl-0 lg:pl-10">For Advertisement Contact</h1> 
+        <h1 class="inline-block font-bold text-white pl-0 lg:pl-10">+91 000 000 00000</h1> 
+        <h1 class="inline-block font-bold text-white pl-0 lg:pl-10">Sample@gmail.com</h1> 
+        <h1 class="inline-block font-bold text-white pl-0 lg:pl-10">00/0, West Street, Thoothukudi.</h1> 
+    </div>
+    
+    <footer class="p-6 lg:px-20 ">
+    
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="col-span-1 p-6 lg:p-12 border-b-2 black">
+                <h2 class="text-2xl mb-8 font-bold text-red-600">Today News</h2>
+                <p class="text-gray-400 text-sm">கோவில்பட்டியில் நடைபெற்ற தேசிய அளவிலான ஜூனியர் ஹாக்கி போட்டியில் தமிழக அணி
+                    கோவா அணியை 11 க்கு பூஜ்ஜியம் என்ற கோல் கணக்கில் அபாரமாக வீழ்த்தியது.</p>
+                <p class="text-gray-400 text-sm mt-4">தாமஸ் கோப்பை பேட்மிண்டன் போட்டி - இந்திய ஆடவர் அணி சாம்பியன்.. மத்திய
+                    அரசு ரூ.1 கோடி பரிசு அறிவிப்பு</p>
+            </div>
+            <div class="col-span-1 p-6 lg:p-12 border-b-2 border-r-2 border-l-2">
+                <div class="lg:flex justify-between">
+                    <h2 class="font-bold text-2xl">After registering, you will receive a confirmation</h2>
+                </div>
+                <input class="my-6 rounded-sm h-16 p-2 block w-full border-2 border-black rounded-xl"
+                    placeholder="Enter Mail-ID" type="text">
+                <a class="bg-red-700 text-white block w-full p-6 mt-4 text-center" href="#">Submit your Idea</a>
+            </div>
+            <div class="col-span-1 p-6 lg:p-12 border-b-2">
+                <h2 class="font-bold text-2xl">Today News</h2>
+                <p class="text-gray-400 my-8 text-sm">கோவில்பட்டியில் நடைபெற்ற தேசிய அளவிலான ஜூனியர் ஹாக்கி போட்டியில் தமிழக
+                    அணி கோவா அணியை 11 க்கு பூஜ்ஜியம் என்ற கோல் கணக்கில் அபாரமாக வீழ்த்தியது.</p>
+                <a href="#" class="mt-12 text-gray-400"> submit --> </a>
+            </div>
+        </div>
+        <div class="lg:flex mt-6 text-center">
+            <a href="#"><img class="w-96 lg:mx-0 mx-auto w-40"
+                    src="http://localhost/nitharsanam/wp-content/uploads/Ref_1_Canada_Nitharsanam_in_English_in_logo-removebg-preview-2-2.png"></a>
+            <h6 class="self-center text-gray-400 m-6 lg:mx-12">confirmation email containing information about.</h6>
+            <a class="self-center" href="#"><img class="w-8 h-8 inline-block self-center ml-4"
+                    src="http://localhost/nitharsanam/wp-content/uploads/2022/05/instagram.png"></a>
+            <a class="self-center" href="#"><img class="w-8 h-8 inline-block self-center ml-4"
+                    src="http://localhost/nitharsanam/wp-content/uploads/2022/05/facebook.png"></a>
+            <a class="self-center" href="#"><img class="w-8 h-8 inline-block self-center ml-4"
+                    src="http://localhost/nitharsanam/wp-content/uploads/2022/05/email.png"></a>
+            <a class="self-center" href="#"><img class="w-8 h-8 inline-block self-center ml-4"
+                    src="http://localhost/nitharsanam/wp-content/uploads/2022/05/send.png"></a>
+            <a class="self-center" href="#"><img class="w-8 h-8 inline-block self-center ml-4"
+                    src="http://localhost/nitharsanam/wp-content/uploads/2022/05/comment.png"></a>
+        </div>
+    </footer>
+    
+</body>
+</html>
