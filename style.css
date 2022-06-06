@@ -321,24 +321,6 @@ animation-name: fadeIn;
   backdrop-filter: blur(15px);
 }
 
-.bg-img1{
-  background-image: url("http://localhost/nitharsanam/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-26-at-9.21.31-PM.jpeg");
-  height: 100%;
-  background-size: cover;
-}
-
-.bg-img2{
-  background-image: url("http://localhost/nitharsanam/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-26-at-9.21.31-PM.jpeg");
-  height: 100%;
-  background-size: cover;
-}
-
-.bg-img3{
-  background-image: url("http://localhost/nitharsanam/wp-content/uploads/2022/05/WhatsApp-Image-2022-05-26-at-9.21.31-PM.jpeg");
-  height: 100%;
-  background-size: cover;
-}
-
 header.hide {
   transform: translateY(6000%);
 }
